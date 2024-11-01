@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,5,6,7,8]
+        let arr2=arr.map(function(ele,ind,arr){
+        return ele**2
+    })
+        console.log(arr)
+        console.log(arr2)
+        const names=["alice","bob","charlie"]
+        let arr3=names.map(function(ele,ind,arr){
+    return ele.toUpperCase()
+})
+        console.log(arr3)
+        const products=[{name:"Laptop",price:1000},{name:"phone",price:500},{name:"Tablet",price:700}]
+        let prod=products.filter(function(ele,ind,arr){
+        return ele.price>500
+    })
+        console.log(prod)
+        const purchase=[{price:10,quantity:2},{price:5,quantity:4},{price:8,quantity:1}]
+        const totalcost=purchase.reduce((total,item)=>{
+        return total+item.price*item.quantity
+    },0)
+    console.log(totalcost)
+    </script>
+    
+</body>
+</html>
